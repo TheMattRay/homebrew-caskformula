@@ -11,13 +11,6 @@ class Inkscape < Formula
     url "https://gitlab.com/inkscape/inkscape.git", :using => :git, :branch => "0.92.x" if build.include? "branch-0.92"
   end
 
-  stable do
-    patch do
-      url "https://gitlab.com/inkscape/inkscape/commit/93ccf03162cd2e46d962822d5507865f3451168c.diff"
-      sha256 "7ce4f70f1cb03cd0bab7dc94821a89bf71600bd59c763ae0d78c48f33db3d9ac"
-    end
-  end
-
   option "branch-0.92", "When used with --HEAD, build from the 0.92.x branch"
 
   option "with-gtk3", "Build Inkscape with GTK+3 (Experimental)"
